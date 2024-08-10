@@ -129,7 +129,20 @@ const TicTacToe = () => {
     setPlayingAs(data.playingAs);
     setOpponentName(data.opponentName);
   });
-
+  socket?.on("playConfirmation", (data) => {
+    Swal.fire({
+      title: `Play against ${data.opponentName}?`,
+      showCancelButton: true,
+      confirmButtonText: "Accept",
+      cancelButtonText: "Decline",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        socket.emit("playConfirmationResponse", { accepted: true });
+      } else {
+        socket.emit("playConfirmationResponse", { accepted: false });
+      }
+    });
+  });
 
 
 

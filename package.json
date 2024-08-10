@@ -1,10 +1,11 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "dev": "concurrently \"cross-env NODE_ENV=development nodemon backend/server.js\" \"cross-env NODE_ENV=development node backend/socket/gameSocket.js\"",
+    "start": "cross-env NODE_ENV=production concurrently \"node backend/server.js\" \"node backend/socket/gameSocket.js\"",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "type": "module",
   "keywords": [],
@@ -31,6 +32,8 @@
     "universal-cookie": "^7.1.4"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
     "nodemon": "^3.1.4"
   }
 }

@@ -14,6 +14,7 @@ export const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
   const user = useRecoilValue(userAtom);
   const [onlineUsers,setOnlineUsers]=useState([])
+ 
 
   useEffect(() => {
                                                                                  //WARNING----??!! IN HIS CODE ITIS CONSTS OCKET ,...MINE IT IS NEW SOCKET!!!!!
