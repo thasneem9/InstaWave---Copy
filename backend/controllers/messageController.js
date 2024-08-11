@@ -5,6 +5,7 @@ import { v2 as cloudinary } from "cloudinary";
 import jwt from 'jsonwebtoken'
 
 
+
 import User from '../models/User.js'
 import { getRecipientSocketId, io } from '../socket/socket.js';
 
@@ -102,6 +103,7 @@ const {otherUserId}=req.params;
  const otherUserIdInt = parseInt(otherUserId, 10);
 
   try {
+   
     const conversation = await Conversation.findOne({
       where: {
         participants: {
@@ -113,7 +115,11 @@ const {otherUserId}=req.params;
   if(!conversation){
     return res.status(404).json({error:"Conversation Not Found"})
   }
-   
+    // Handle the case for mock conversations if needed
+   /*  if (conversation.mock) {
+      return res.status(200).json([]); // Return an empty array or appropriate response
+    } */
+
   // Retrieve messages from the found conversation
   const messages = await Message.findAll({
     where: {
@@ -189,7 +195,5 @@ async function getConversations(req,res){
 }
 
 export  {sendMessage,getMessages,getConversations};
-
-
 
 

@@ -6,9 +6,10 @@ import {getConversations} from  "../controllers/messageController.js"
 
 const router=express.Router()
 
+router.post("/",sendMessage)
 router.get("/conversations",getConversations)
 router.get("/:otherUserId",getMessages)//i.e, bw logged in user and /:otherUserId
-router.post("/",sendMessage)
+
 
 
 export default router                          

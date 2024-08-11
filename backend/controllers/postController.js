@@ -328,7 +328,7 @@ const replyToPost = async (req, res) => {
            return res.status(404).json({ error: "User not found." });
        }
        req.user = user; // Manually setting req.user
-       console.log("------3@@@999999----user:",user)
+       console.log("user:",user)
         const { text } = req.body;
         const postId = req.params.id;
         const userProfilePic = req.user.profilePic;
