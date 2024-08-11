@@ -50,9 +50,9 @@ if(process.env.NODE_ENV=== "production"){
 sequelize.sync({ force: false }) // Set force to true only in development to recreate tables
 .then(() => {
     console.log('Database synced successfully');
-    server.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));
 })
 .catch((err) => {
     console.log('Error syncing the database:', err);
 });
+server.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));
 
