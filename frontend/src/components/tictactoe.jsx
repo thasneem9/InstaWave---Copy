@@ -156,7 +156,7 @@ const TicTacToe = () => {
     }
     const username = result.value;
     setPlayerName(username);
-    const newSocket = io("http://localhost:4000", {
+    const newSocket = io("/", {
       autoConnect: true,
     });
     newSocket?.emit("request_to_play", {

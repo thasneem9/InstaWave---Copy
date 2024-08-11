@@ -18,7 +18,7 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
                                                                                  //WARNING----??!! IN HIS CODE ITIS CONSTS OCKET ,...MINE IT IS NEW SOCKET!!!!!
-    const newSocket = io("http://localhost:5000", {
+    const newSocket = io("/", {
       query: {
         userId: user?._id
       }

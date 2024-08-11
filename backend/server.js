@@ -8,6 +8,8 @@ import postRoutes from './routes/postRoute.js'
 import messageRoutes from './routes/messageRoute.js'
 import sequelize from './db/database.js'; 
 import {app,server} from "./socket/socket.js"//aslo changed i n last line app.lisetn to server.listen
+import job from './cron/cron.js'
+
 // Ensure correct path
  // Ensure this file is imported to set up associations
 //folowunfoloe:
@@ -17,6 +19,7 @@ import {v2 as cloudinary} from "cloudinary";
 
 
 dotenv.config();
+job.start();
 
 /* const app = express(); already created in ocket*/
 const PORT = process.env.PORT || 5000;
