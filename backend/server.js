@@ -52,3 +52,4 @@ sequelize.sync({ force: false }) // Set force to true only in development to rec
 .catch((err) => {
     console.log('Error syncing the database:', err);
 });
+
