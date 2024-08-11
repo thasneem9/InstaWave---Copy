@@ -1,6 +1,6 @@
-// database.js
-
 import { Sequelize } from 'sequelize';
+import dotenv from 'dotenv';
+dotenv.config();
 
 /* const sequelize = new Sequelize('instawave', 'postgres', 'postgresql566',{
     dialect: 'postgres',
@@ -18,13 +18,14 @@ import { Sequelize } from 'sequelize';
     logging:console.log
     
 }); */
-const sequelize = new Sequelize('instawave', 'postgres', 'postgresql566',{
-    dialect:'postgres',
-    connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
-    
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialect: 'postgres',
+    dialectOptions: {
+        ssl: {
+            rejectUnauthorized: false, // Depending on your SSL certificate setup
+        },
+    },
+    logging: console.log, // You can turn this off or adjust as needed
 });
 
 export default sequelize;
