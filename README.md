@@ -13,7 +13,7 @@
   
 
 ## Description
-This is a full-stack social media app, named 'instawave' created as part of my 1 month summer internship project, allows users to message each other real time using socket.io and play multiplayer games like toc-tac-toe with ecah other in real time.
+This is a full-stack social media app, named 'instawave' created as part of my first year 1 month summer internship project, allows users to message each other real time using socket.io and play multiplayer games like toc-tac-toe with ecah other in real time.
 
 ## Features
 - Signup/Login
@@ -64,7 +64,7 @@ Steps:
 5.Start the server by running npm start in the backend folder.
 6.The app should now be running on localhost:5000.
 ## Live Demo
-[*YouTube link and live URL if available...*](https://www.youtube.com/watch?v=HR9lszepjRQ)
+[*Watch Live Demo on Youtube...*](https://www.youtube.com/watch?v=HR9lszepjRQ)
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/92a9eef8-6910-4b00-97d0-963ff56473d3)
 ![image](https://github.com/user-attachments/assets/39bb410c-1eb9-4b9e-8131-a85a6919c30c)
