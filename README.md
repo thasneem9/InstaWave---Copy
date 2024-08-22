@@ -28,7 +28,6 @@ This is a full-stack social media app, named 'instawave' created as part of my f
 - Update profile
 - send images real time
   
-...
 
 ## Tech Stack
 Frontend:
@@ -48,7 +47,7 @@ Backend:
 -Cloudinary
 -Bcrypt
 -UUID
-...
+
 
 ## Installation
 Prerequisites:
