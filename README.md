@@ -32,36 +32,36 @@ This is a full-stack social media app, named 'instawave' created as part of my f
 ## Tech Stack
 Frontend:
 
--React
--Chakra UI
--SweetAlert2
--Recoil
--HTML, CSS
+- React
+- Chakra UI
+- SweetAlert2
+- Recoil
+- HTML, CSS
 
 Backend:
 
--Node.js
--Express.js
--PostgreSQL
--CORS
--Cloudinary
--Bcrypt
--UUID
+- Node.js
+- Express.js
+- PostgreSQL
+- CORS
+- Cloudinary
+- Bcrypt
+- UUID
 
 
 ## Installation
 Prerequisites:
 
--Node.js
---PostgreSQL
+- Node.js
+- PostgreSQL
 
 Steps:
-1.Clone the repository.
-2.Navigate to the backend folder and run npm install.
-3.Navigate to the frontend folder and run npm install.
-4.Run npm run build in the frontend folder.
-5.Start the server by running npm start in the backend folder.
-6.The app should now be running on localhost:5000.
+1. Clone the repository.
+2. Navigate to the backend folder and run npm install.
+3. Navigate to the frontend folder and run npm install.
+4. Run npm run build in the frontend folder.
+5. Start the server by running npm start in the backend folder.
+6. The app should now be running on localhost:5000.
 ## Live Demo
 [*Watch Live Demo on Youtube...*](https://www.youtube.com/watch?v=HR9lszepjRQ)
 ## Screenshots
